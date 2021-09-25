@@ -1,0 +1,386 @@
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    font-family: "Inconsolata", sans-serif;
+}
+
+/* COMMON */
+.col {
+    width: 100%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-4 {
+    width: 24.99999%;
+}
+
+.pad-8-16 {
+    padding: 8px 16px;
+}
+
+.section-content {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+}
+
+.section-title {
+    letter-spacing: 2px;
+    font-weight: 300;
+    background-color: #000;
+    color: #fff;
+    max-width: 230px;
+    text-align: center;
+    margin: 0 auto 55px;
+    padding: 5px;
+}
+
+.section-title:hover {
+    cursor: select;
+}
+
+.pull-right {
+    float: right;
+}
+
+.text {
+    font-size: 17px;
+    letter-spacing: 2px;
+    line-height: 26px;
+}
+/* CSS HEAD */
+#head {
+    
+}
+
+.nav-btn {
+    display: block;
+    width: 25px;
+    height: 25px;
+    color: white;
+    position: relative;
+    top: 21%;
+    left: 1%;
+}
+
+#nav-pc {
+    height: 54px;
+    background-color: #000;
+}
+
+#nav-mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    background-color: #231e1e;
+    z-index: 1;
+    padding: 20px;
+    /* display: none; */
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all linear 0.2s;
+}
+
+.nav-mobile-close {
+    display: block;
+    position: absolute;
+    right: 21px;
+    width: 25px;
+    height: 25px;
+    color: white;
+
+}
+
+#nav-active:checked ~ .nav-overlay {
+    display: block;
+    animation: fadeIn linear 0.2s;
+}
+
+#nav-active:checked ~ #nav-mobile {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.nav-mobile-item {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-top: 17px;
+}
+
+.nav-pc-list {
+    height: 54px;
+    display: flex;
+    align-items: center;
+    /* height: 100%; */
+}
+
+
+
+.nav-wrap-item {
+    text-align: center;
+}
+
+.nav-item {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.nav-item:hover {
+    background-color: #ccc;
+}
+
+#head-bg {
+    background-image: url('/assets/img/coffeehouse.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 75%;
+    width: 100%;
+    height: 300px;
+    filter: grayscale(50%);
+    position: relative;
+}
+
+.head-bg-left {
+    position: absolute;
+    left: 2%;
+    bottom: 4%;
+    color: #fff;
+    background-color: #000;
+    padding: 5px;
+}
+
+.head-bg-center {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: 85px;
+    color: #fff;
+    transform: translateX(-50%);
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+.head-bg-center p:first-child {
+    margin-bottom: 34px;
+}
+
+.head-bg-right {
+    position: absolute;
+    right: 2%;
+    bottom: 4%;
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+}
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1;
+}
+/* CSS CONTENT */
+#content {
+    background-color: #f1f1f1;
+}
+
+/* CSS SECTION ABOUT */
+.about-title {
+    font-weight: 100;
+}
+
+.about-trick {
+    padding: 16px;
+    background-color: #ececec;
+    border-left: 5px solid #ccc;
+    margin: 26px 0;
+}
+
+.about-img {
+    width: 100%;
+    filter: grayscale(50%);
+}
+
+.about-text-bold {
+    font-weight: 600;
+    margin: 15px 0;
+    display: inline-block;
+    font-size: 17px;
+}
+
+.about-text-normal {
+    font-size: 17px;
+}
+
+/* CSS THE MENU */
+.menu-title {
+    font-weight: 100;
+}
+
+.menu-head {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 8px 16px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.menu-type {
+    display: inline-block;
+    font-size: 19px;
+    padding: 4px 0;
+    color: #000;
+}
+
+.menu-type:hover {
+    cursor: pointer;
+}
+
+.menu-type.menu-type--active {
+    background-color: #616161;
+    color: #fff;
+}
+
+.menu-body {
+    display: none;
+    padding: 48px 16px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.menu-body.menu--active {
+    display: block;
+}
+
+.menu-info {
+
+}
+
+.menu-name {
+    margin: 10px 0;
+    font-weight: 100;
+    color: #201f1f;
+}
+
+.menu-description {
+    margin: 18px 0;
+    color: #757575;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.menu-img {
+    width: 100%;
+    margin-top: 32px;
+    filter: grayscale(50%);
+}
+
+/* CSS MAP */
+.map-text {
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-bottom: 26px;
+}
+
+.map-img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(50%);
+}
+
+.map-wrap-text {
+    display: inline-block;
+    margin-top: 16px;
+}
+
+.map-wrap-text span:last-child {
+    
+}
+
+.map-input {
+    margin: 8px 0;
+    padding: 14px 8px;
+    font-size: 17px;
+    color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+#time {
+    color: #000;
+}
+.map-wrap-input {
+    padding-bottom: 54px;
+}
+
+.map-btn {
+    border: none;
+    padding: 16px;
+    background-color: #000;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.map-btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+/* CSS FOOTER */
+#footer {
+    background-color: #ccc;
+    padding: 64px;
+    text-align: center;
+}
+
+.footer-cpr {
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.footer-link {
+    color: #000;
+}
+/* Mobile */
+@media screen and (max-width: 739px) {
+    .head-bg-left {
+        display: none;
+    }
+    #content {
+        padding:0 10px ;
+    }
+}
+
+/* Tablet and mobile */
+@media screen and (max-width: 1023px) {
+    .nav-pc-list {
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
